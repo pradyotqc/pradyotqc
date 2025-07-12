@@ -2,9 +2,7 @@
 ### Quantum Computing Researcher | Optimization Specialist | GPU Accelerated Computing
 
 <p align="center">
-  <img src="https://media.giphy.com/media/QHE5gWI0QjqF2/giphy.gif" width="150" alt="Welcome">
-  <img src="https://media.giphy.com/media/3o7bu3XilJ5BOepBHq/giphy.gif" width="200" alt="Quantum Computing">
-  <img src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" width="150" alt="Physics">
+  <img src="https://www.quantamagazine.org/wp-content/uploads/2020/07/Qubits_2880x1220_Lede_HPA.gif" width="500" alt="Welcome">
 </p>
 
 ---
