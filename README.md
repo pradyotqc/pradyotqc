@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://scitechdaily.com/images/Giant-Atomic-Ions-Concept.gif" width="200">
+<img src="https://www.quantamagazine.org/wp-content/uploads/2020/07/Qubits_2880x1220_Lede_HPA.gif" width="600">
 </p>
 
 Hi, I’m Pradyot! 👋
