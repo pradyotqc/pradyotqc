@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://www.google.com/search?q=https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2FmM2Q1YjZlZDIyYjQ4ZDY3ZDU2ZWMzM2MzZDA1YmQ4ZGY2ZmM2ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LwBTgQ7xVzt42o5n0M/giphy.gif" width="200">
+<img src="[https://www.google.com/search?q=https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2FmM2Q1YjZlZDIyYjQ4ZDY3ZDU2ZWMzM2MzZDA1YmQ4ZGY2ZmM2ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LwBTgQ7xVzt42o5n0M/giphy.gif](https://scitechdaily.com/images/Giant-Atomic-Ions-Concept.gif)" width="200">
 </p>
 
 Hi, I’m Pradyot! 👋
