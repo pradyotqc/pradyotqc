@@ -23,7 +23,7 @@
 ### 🚀 Let's Innovate Together!
 
 <div align="center">
-  <img src="https://media.giphy.com/media/Ln2dAW9oycjgmTpjX9/giphy.gif" width="400" alt="Collaboration">
+  <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*e3OD5KfAAEzw5AJgzf7B8Q.gif" width="400" alt="Collaboration">
 </div>
 
 I'm passionate about:
