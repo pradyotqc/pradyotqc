@@ -3,7 +3,7 @@
 
 <p align="center">
   <img src="https://media.giphy.com/media/QHE5gWI0QjqF2/giphy.gif" width="150" alt="Welcome">
-  <img src="https://media.giphy.com/media/l0HU7JI8AfId3M0A0/giphy.gif" width="200" alt="Quantum Computing">
+  <img src="https://media.giphy.com/media/3o7bu3XilJ5BOepBHq/giphy.gif" width="200" alt="Quantum Computing">
   <img src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" width="150" alt="Physics">
 </p>
 
@@ -12,7 +12,7 @@
 ## ⚛️ Bridging the Quantum Realm with Real-World Impact
 
 <div align="center">
-  <img src="https://media.giphy.com/media/3o7TKAUnKCVVl8Dr4c/giphy.gif" width="500" alt="Quantum Computing Visualization">
+  <img src="https://media.giphy.com/media/3o7TKUM3IgJBX2as9O/giphy.gif" width="500" alt="Quantum Computing Visualization">
 </div>
 
 ### 🔬 Research Focus
@@ -61,7 +61,7 @@
     </div>
     <div style="width: 45%; margin: 10px; padding: 15px; background: rgba(255,255,255,0.1); border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
       <h3 style="color: #58a6ff;">🔗 Quantum Compilers</h3>
-      <img src="https://media.giphy.com/media/3o7TKAUnKCVVl8Dr4c/giphy.gif" width="200" style="border-radius: 8px;">
+      <img src="https://media.giphy.com/media/3o7bu3XilJ5BOepBHq/giphy.gif" width="200" style="border-radius: 8px;">
       <p style="color: #c9d1d9;">Developing optimized quantum circuits with Classiq and Qiskit Transpiler</p>
     </div>
   </div>
@@ -122,5 +122,5 @@ I'm eager to collaborate on:
 > Let's explore the quantum frontier together! 🚀
 
 <div align="center">
-  <img src="https://media.giphy.com/media/3o7aD5zI0hZp3dMbYY/giphy.gif" width="200" alt="Quantum Physics">
+  <img src="https://media.giphy.com/media/3o7bu3XilJ5BOepBHq/giphy.gif" width="200" alt="Quantum Physics">
 </div>
