@@ -10,7 +10,7 @@
 ## ⚛️ Quantum Compilers & Optimization
 
 <div align="center">
-  <img src="[https://media.giphy.com/media/3o7TKUM3IgJBX2as9O/giphy.gif](https://miro.medium.com/v2/resize:fit:720/format:webp/1*Gr8NJm0-Z8A0wzW8FTvQkQ.gif)" width="500" alt="Quantum Compilation">
+  <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*Gr8NJm0-Z8A0wzW8FTvQkQ.gif" width="500" alt="Quantum Compilation">
   <h3>Transforming quantum algorithms into optimized hardware instructions</h3>
 </div>
 
