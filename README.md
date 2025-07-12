@@ -65,5 +65,5 @@ I'm passionate about:
 </p>
 
 <div align="center">
-  <img src="https://media.giphy.com/media/3o7bu3XilJ5BOepBHq/giphy.gif" width="200" alt="Quantum Computing">
+  <img src="https://scitechdaily.com/images/Giant-Atomic-Ions-Concept.gif" width="200" alt="Quantum Computing">
 </div>
