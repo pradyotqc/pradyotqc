@@ -1,3 +1,7 @@
+<p align="center">
+<img src="https://www.google.com/search?q=https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2FmM2Q1YjZlZDIyYjQ4ZDY3ZDU2ZWMzM2MzZDA1YmQ4ZGY2ZmM2ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LwBTgQ7xVzt42o5n0M/giphy.gif" width="200">
+</p>
+
 Hi, I’m Pradyot! 👋
 ⚛️ Bridging the Quantum Realm with Real-World Impact
 👀 I'm deeply immersed in the fascinating world of Quantum Computing, exploring cutting-edge Quantum Algorithms, and pioneering Optimization techniques for both fundamental physics challenges and complex real-world problems.
