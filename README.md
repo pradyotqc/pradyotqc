@@ -1,5 +1,5 @@
 # 👋 Hi, I'm Pradyot! 
-### Quantum Computing Researcher | Optimization Specialist | GPU Accelerated Computing
+### Quantum Computing Researcher | Optimization Specialist | Accelerated Quantum Computing
 
 <!---<p align="center">
 //  <img src="https://www.quantamagazine.org/wp-content/uploads/2020/07/Qubits_2880x1220_Lede_HPA.gif" width="650" alt="Welcome">
