@@ -1,25 +1,26 @@
 # 👋 Hi, I'm Pradyot! 
 ### Quantum Computing Researcher | Optimization Specialist | Accelerated Quantum Computing
 
-<!---<p align="center">
-//  <img src="https://www.quantamagazine.org/wp-content/uploads/2020/07/Qubits_2880x1220_Lede_HPA.gif" width="650" alt="Welcome">
-//</p>
---->
-
 ---
 
-## ⚛️ Quantum Compilers & Optimization
+## ⚛️ Quantum Compilers, Algorithms & Optimization
 
 <div align="center">
   <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*Gr8NJm0-Z8A0wzW8FTvQkQ.gif" width="500" alt="Quantum Compilation">
   <h3>Transforming quantum algorithms into optimized hardware instructions</h3>
 </div>
 
-### 🔧 Compiler Expertise
-- 🛠️ **Quantum Circuit Optimization**: Gate synthesis, transpilation, error mitigation
-- ⚡ **Performance Tuning**: Qubit mapping, routing, pulse-level optimization
-- 🔗 **Hybrid Compilation**: Classical-quantum co-design with Classiq & Qiskit
-- 📊 **Benchmarking**: Quantum volume, gate fidelity, circuit depth analysis
+### 🧪 Quantum Algorithms & Methodologies
+- ⚛️ **Variational & Hybrid Algorithms:** QAOA, VQE, and custom Hybrid Quantum-Classical Frameworks
+- ⏱️ **Time Evolution & Subspace Methods:** QITE, varQITE, imaginary-time-based subspace refinement, Subspace Quantum Diagonalization (SQD), and Subspace Krylov Quantum Diagonalization (SKQD)
+- 🧲 **Adiabatic & Annealing:** Adiabatic Quantum Computing, Quantum Annealers, and Hybrid Quantum Annealing for complex optimization tasks
+- 🧬 **Electronic Structure & Strongly Correlated Systems:** Quantum Selected Configuration Interaction (QSCI) and Krylov Quantum Diagonalization
+
+### 🔧 Compiler & Circuit Expertise
+- 🛠️ **Advanced Circuit Optimization:** Gate synthesis, transpilation, dynamic decoupling, and error mitigation techniques for NISQ hardware
+- ⚡ **Performance Tuning:** Qubit mapping, routing, pulse-level optimization, and resource reduction
+- 🔗 **Hybrid Compilation:** Classical-quantum co-design with Classiq & Qiskit
+- 📊 **Benchmarking:** Quantum volume, gate fidelity, and circuit depth analysis
 
 ### 🚀 Let's Innovate Together!
 
