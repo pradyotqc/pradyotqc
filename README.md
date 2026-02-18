@@ -1,71 +1,204 @@
-# 👋 Hi, I'm Pradyot! 
-### Quantum Computing Researcher | Optimization Specialist | Accelerated Quantum Computing
+# 👋 Hi, I'm Pradyot Pritam  
+### Quantum Computing Researcher | Quantum Algorithms & Compiler Optimization | Accelerated Quantum Simulation
 
 ---
 
-## ⚛️ Quantum Compilers, Algorithms & Optimization
+## ⚛️ Quantum Algorithms, Compilation & Scalable Simulation
 
 <div align="center">
   <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*Gr8NJm0-Z8A0wzW8FTvQkQ.gif" width="500" alt="Quantum Compilation">
-  <h3>Transforming quantum algorithms into optimized hardware instructions</h3>
+  <h3>Bridging Quantum Algorithm Design with Hardware-Efficient Implementations</h3>
 </div>
 
-### 🧪 Quantum Algorithms & Methodologies
-- ⚛️ **Variational & Hybrid Algorithms:** QAOA, VQE, and custom Hybrid Quantum-Classical Frameworks
-- ⏱️ **Time Evolution & Subspace Methods:** QITE, varQITE, imaginary-time-based subspace refinement, Subspace Quantum Diagonalization (SQD), and Subspace Krylov Quantum Diagonalization (SKQD)
-- 🧲 **Adiabatic & Annealing:** Adiabatic Quantum Computing, Quantum Annealers, and Hybrid Quantum Annealing for complex optimization tasks
-- 🧬 **Electronic Structure & Strongly Correlated Systems:** Quantum Selected Configuration Interaction (QSCI) and Krylov Quantum Diagonalization
-
-### 🔧 Compiler & Circuit Expertise
-- 🛠️ **Advanced Circuit Optimization:** Gate synthesis, transpilation, dynamic decoupling, and error mitigation techniques for NISQ hardware
-- ⚡ **Performance Tuning:** Qubit mapping, routing, pulse-level optimization, and resource reduction
-- 🔗 **Hybrid Compilation:** Classical-quantum co-design with Classiq & Qiskit
-- 📊 **Benchmarking:** Quantum volume, gate fidelity, and circuit depth analysis
-
-### 🚀 Let's Innovate Together!
-
-<div align="center">
-  <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*e3OD5KfAAEzw5AJgzf7B8Q.gif" width="400" alt="Collaboration">
-</div>
-
-I'm passionate about:
-- Developing next-gen quantum compilers
-- Creating hardware-aware optimization techniques
-- Bridging algorithm design with physical implementations
-- Accelerating quantum computing through GPU-optimized simulation
+I specialize in **algorithm–hardware co-design**, focusing on scalable quantum algorithms, compiler-level optimizations, tensor-network-enhanced simulation, and GPU-accelerated hybrid quantum-classical workflows for near-term and fault-tolerant quantum systems.
 
 ---
 
-## 🛠️ Technical Stack
+# 🧠 Quantum Algorithms & Methodological Frameworks
+
+## 1️⃣ Variational & Hybrid Quantum Algorithms
+
+### 🔹 QAOA (Quantum Approximate Optimization Algorithm)
+- Parameter landscape analysis  
+- Depth–performance tradeoff studies  
+- Problem-aware mixer construction  
+- Warm-start and adaptive-QAOA strategies  
+- Hybrid QAOA–imaginary time refinement  
+
+### 🔹 VQE (Variational Quantum Eigensolver)
+- Hardware-efficient and chemically inspired ansätze  
+- ADAPT-style ansatz growth  
+- Gradient-based vs gradient-free benchmarking  
+- Noise-aware optimization  
+- Measurement cost reduction techniques  
+
+### 🔹 Custom Hybrid Frameworks
+- Alternating QAOA–VarQITE pipelines  
+- Imaginary-time guided variational refinement  
+- Subspace-assisted variational circuits  
+- Classical preconditioning of ansätze  
+
+---
+
+## 2️⃣ Time Evolution & Krylov-Based Methods
+
+- Quantum Imaginary Time Evolution (QITE)  
+- Variational QITE (varQITE)  
+- Real-time evolution via Krylov subspace  
+- Subspace Quantum Diagonalization (SQD)  
+- Subspace Krylov Quantum Diagonalization (SKQD)  
+
+### Technical Focus:
+- One-body / two-body Hamiltonian splitting  
+- Sparse Lanczos propagation  
+- Trotter vs Krylov accuracy tradeoffs  
+- Low-depth imaginary-time circuits  
+- Subspace compression & pruning  
+- Krylov-enhanced ground-state refinement  
+
+---
+
+## 3️⃣ Electronic Structure & Strongly Correlated Systems
+
+- Quantum Selected Configuration Interaction (QSCI)  
+- Fermion-to-qubit mappings (Jordan–Wigner, Bravyi–Kitaev)  
+- SparsePauliOp Hamiltonian engineering  
+- Hartree–Fock state preparation  
+- Strong correlation treatment via subspace expansion  
+
+### Applications:
+- Molecular ground states  
+- Lattice Hamiltonians  
+- Spin systems  
+- Fermionic Hamiltonians in chemist notation  
+
+---
+
+## 4️⃣ Adiabatic & Annealing Approaches
+
+- Adiabatic Quantum Computing (AQC)  
+- Hybrid Quantum Annealing  
+- Annealing schedule optimization  
+- Hardware graph-aware embeddings  
+- Quantum-classical annealing feedback loops  
+
+---
+
+# 🛠️ Quantum Compiler & Circuit Optimization
+
+## 1️⃣ Advanced Circuit Optimization
+- Gate synthesis & decomposition  
+- Two-qubit gate reduction  
+- Depth compression  
+- Commutation-based circuit rewriting  
+- Pauli grouping & measurement reduction  
+- Dynamic decoupling insertion  
+- Integrated error mitigation  
+
+## 2️⃣ Hardware-Aware Transpilation
+- Qubit mapping & routing  
+- Connectivity-aware compilation  
+- Crosstalk-aware scheduling  
+- Pulse-level optimization  
+- Calibration-informed transpilation  
+
+## 3️⃣ Resource Reduction Techniques
+- Parameter tying & symmetry reduction  
+- Ansatz compression  
+- Entanglement-aware pruning  
+- Circuit cutting & distributed simulation  
+- Shot allocation optimization  
+
+---
+
+# 🔗 Tensor Networks & Classical Acceleration
+
+## 1️⃣ Tensor Network Methods
+- Matrix Product States (MPS)  
+- Matrix Product Operators (MPO)  
+- Time-Evolving Block Decimation (TEBD)  
+- Contraction order optimization  
+- Bond-dimension control  
+- Entanglement entropy diagnostics  
+
+### Applications:
+- Classical simulation (20–30 qubits)  
+- Low-entanglement circuit verification  
+- Krylov-based tensor evolution  
+- Hybrid tensor–variational workflows  
+
+---
+
+## 2️⃣ GPU-Accelerated Quantum Simulation
+- CUDA-optimized statevector evolution  
+- Sparse Hamiltonian propagation  
+- Batched expectation evaluation  
+- Parallel parameter-shift gradients  
+- Krylov subspace GPU acceleration  
+- Memory-efficient simulation pipelines  
+
+---
+
+# 📊 Benchmarking & Performance Analysis
+
+- Circuit depth vs fidelity scaling  
+- Quantum volume analysis  
+- Noise sensitivity profiling  
+- Gate error impact studies  
+- Convergence vs parameter scaling  
+- Classical runtime vs quantum depth tradeoffs  
+
+---
+
+# 🚀 Research Vision
+
+I aim to:
+
+- Develop next-generation quantum compilers  
+- Design scalable low-depth quantum algorithms  
+- Build hardware-efficient imaginary-time methods  
+- Integrate tensor networks with variational circuits  
+- Enable accelerated hybrid quantum-classical pipelines  
+- Bridge algorithmic theory with physical implementation  
+
+---
+
+# 🛠️ Technical Stack
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Qiskit-6929C4?style=for-the-badge&logo=Qiskit&logoColor=white" alt="Qiskit">
-  <img src="https://img.shields.io/badge/Cirq-4285F4?style=for-the-badge&logo=Cirq&logoColor=white" alt="Cirq">
-  <img src="https://img.shields.io/badge/PennyLane-6C2AE7?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSJ3aGl0ZSIgZD0iTTI1NiA4QzExOSA4IDggMTE5IDggMjU2czExMSAyNDggMjQ4IDI0OCAyNDgtMTExIDI0OC0yNDhTMzkzIDggMjU2IDh6bTAgNDQ4Yy0xMTAuNSAwLTIwMC04OS41LTIwMC0yMDBTMTQ1LjUgNTYgMjU2IDU2czIwMCA4OS41IDIwMCAyMDAtODkuNSAyMDAtMjAwIDIwMHptNjgtMTQ0LjFjLTIwLjggMTkuNy01Mi43IDE5LjUtNzMuMi0uNkwzMDcgMjYxLjZjLTUuNS01LjUtMTQuMi01LjUtMTkuNyAwTDI2MS4yIDMwMWMtMjAuNSAyMC41LTUyLjQgMjAuMy03My4yLjYtMjAuOC0xOS43LTIxLTUxLjktLjYtNzIuNGwxOS44LTE5LjhoLS4xbDg2LjctODYuN2M2LjItNi4yIDE2LjQtNi4yIDIyLjYgMGw4Ni43IDg2LjdIMjkzbDE5LjggMTkuOGMyMC40IDIwLjUgMjAuMiA1Mi43LS42IDcyLjR6Ii8+PC9zdmc+&logoColor=white" alt="PennyLane">
-  <img src="https://img.shields.io/badge/Classiq-00AEEF?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSJ3aGl0ZSIgZD0iTTI1NiA4QzExOSA4IDggMTE5IDggMjU2czExMSAyNDggMjQ4IDI0OCAyNDgtMTExIDI0OC0yNDhTMzkzIDggMjU2IDh6bTAgNDQ4Yy0xMTAuNSAwLTIwMC04OS41LTIwMC0yMDBTMTQ1LjUgNTYgMjU2IDU2czIwMCA4OS41IDIwMCAyMDAtODkuNSAyMDAtMjAwIDIwMHptOTYtMzA0SDIxNnYxMjhoMTM2di0zMkgxNjB2LTk2aDE5MnYtMzJ6Ii8+PC9zdmc+&logoColor=white" alt="Classiq">
+  <img src="https://img.shields.io/badge/Qiskit-6929C4?style=for-the-badge&logo=Qiskit&logoColor=white" />
+  <img src="https://img.shields.io/badge/Cirq-4285F4?style=for-the-badge&logo=Cirq&logoColor=white" />
+  <img src="https://img.shields.io/badge/PennyLane-6C2AE7?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Classiq-00AEEF?style=for-the-badge" />
   <br>
-  <img src="https://img.shields.io/badge/CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white" alt="CUDA">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++">
-  <img src="https://img.shields.io/badge/OpenQASM-6B4DEE?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSJ3aGl0ZSIgZD0iTTI1NiA4QzExOSA4IDggMTE5IDggMjU2czExMSAyNDggMjQ4IDI0OCAyNDgtMTExIDI0OC0yNDhTMzkzIDggMjU2IDh6bTAgNDQ4Yy0xMTAuNSAwLTIwMC04OS41LTIwMC0yMDBTMTQ1LjUgNTYgMjU2IDU2czIwMCA4OS41IDIwMCAyMDAtODkuNSAyMDAtMjAwIDIwMHptLTQwLTEyOGg4MHY2NGgtODB2LTY0em0wLTEyOGg4MHY2NGgtODB2LTY0eiIvPjwvc3ZnPg==&logoColor=white" alt="OpenQASM">
+  <img src="https://img.shields.io/badge/CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" />
+  <img src="https://img.shields.io/badge/OpenQASM-6B4DEE?style=for-the-badge" />
 </div>
 
 ---
 
 ## 📫 Get in Touch
 
+I’m open to research collaborations in quantum algorithms, compiler research, tensor networks, and large-scale hybrid quantum-classical systems.
+
 <p align="center">
   <a href="mailto:pradyotpritam@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
+    <img src="https://img.shields.io/badge/Email-Pradyot_Pritam-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
   </a>
   <a href="https://www.linkedin.com/in/pradyot-psahoo/">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+    <img src="https://img.shields.io/badge/LinkedIn-Pradyot_Pritam-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
   </a>
   <a href="https://x.com/pradyot_pritam">
-    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter">
+    <img src="https://img.shields.io/badge/X-@pradyot_pritam-000000?style=for-the-badge&logo=twitter&logoColor=white" alt="X">
   </a>
 </p>
 
 <div align="center">
-  <img src="https://scitechdaily.com/images/Giant-Atomic-Ions-Concept.gif" width="200" alt="Quantum Computing">
+  <img src="https://scitechdaily.com/images/Giant-Atomic-Ions-Concept.gif" width="220" alt="Quantum Computing">
 </div>
+
+---
+
+⭐ Open to collaborations in quantum compiler development, scalable algorithm design, and tensor-network-enhanced simulation.
