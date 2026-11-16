@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 280" width="100%" height="100%">
+  <defs>
+    <!-- Background Grid -->
+    <pattern id="telem-grid-v4" width="22" height="22" patternUnits="userSpaceOnUse">
+      <path d="M 22 0 L 0 0 0 22" fill="none" stroke="#131d2e" stroke-width="0.75" opacity="0.65" />
+    </pattern>
+
+    <!-- Glow Filter -->
+    <filter id="telem-glow-v4" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <linearGradient id="crt-scan-v4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00f5d4" stop-opacity="0" />
+      <stop offset="50%" stop-color="#00f5d4" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#00f5d4" stop-opacity="0" />
+    </linearGradient>
+
+    <style>
+      @keyframes cursorBlinkV4 {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+      @keyframes crtPassV4 {
+        0% { transform: translateY(-40px); opacity: 0; }
+        25% { opacity: 0.7; }
+        75% { opacity: 0.7; }
+        100% { transform: translateY(280px); opacity: 0; }
+      }
+      @keyframes radarSweep {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes radarPulse {
+        0%, 100% { r: 4px; opacity: 0.9; }
+        50% { r: 7px; opacity: 0.4; }
+      }
+      @keyframes ledPulseV4 {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.35; transform: scale(0.85); }
+      }
+
+      .t-code-v4 { font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; }
+      .cursor-v4 { animation: cursorBlinkV4 1s infinite; }
+      .crt-line-v4 { animation: crtPassV4 4s ease-in-out infinite; }
+      .radar-needle { transform-origin: 820px 145px; animation: radarSweep 6s linear infinite; }
+      .radar-blip { animation: radarPulse 2s ease-in-out infinite; }
+      .t-led-v4 { animation: ledPulseV4 1.5s ease-in-out infinite; transform-origin: center; }
+    </style>
+  </defs>
+
+  <!-- Outer Window (Solid, NO dashed perimeter) -->
+  <rect x="10" y="10" width="900" height="260" rx="14" fill="#070a12" stroke="#1e293b" stroke-width="1.6" />
+  <rect x="12" y="12" width="896" height="256" rx="12" fill="url(#telem-grid-v4)" />
+
+  <!-- CRT Holographic Scanner -->
+  <rect x="12" y="0" width="896" height="40" fill="url(#crt-scan-v4)" class="crt-line-v4" pointer-events="none" />
+
+  <!-- Top Title Bar -->
+  <rect x="10" y="10" width="900" height="36" rx="14" fill="#0d1322" />
+  <rect x="10" y="36" width="900" height="10" fill="#0d1322" />
+  <line x1="10" y1="46" x2="910" y2="46" stroke="#1e293b" stroke-width="1.2" />
+
+  <!-- Window Controls -->
+  <circle cx="34" cy="28" r="5" fill="#ef4444" />
+  <circle cx="52" cy="28" r="5" fill="#f59e0b" />
+  <circle cx="70" cy="28" r="5" fill="#10b981" />
+
+  <!-- Window Header Text -->
+  <text x="96" y="32" fill="#94a3b8" font-size="11.5" font-weight="600" letter-spacing="1" class="t-code-v4">
+    SYSTEM TELEMETRY // PRADYOT_QC.KERNEL
+  </text>
+
+  <!-- Live Status LED -->
+  <circle cx="855" cy="28" r="4.5" fill="#00f5d4" class="t-led-v4" filter="url(#telem-glow-v4)" />
+  <text x="840" y="32" fill="#00f5d4" font-size="10.5" font-weight="700" letter-spacing="1" class="t-code-v4" text-anchor="end">
+    LIVE KERNEL
+  </text>
+
+  <!-- Telemetry Content Body (Left Side) -->
+  <g transform="translate(36, 78)">
+    <!-- Row 1: OPERATOR -->
+    <text x="0" y="0" fill="#00f5d4" font-size="13" font-weight="700" class="t-code-v4">OPERATOR     :</text>
+    <text x="145" y="0" fill="#ffffff" font-size="13.5" font-weight="700" class="t-code-v4">Pradyot Pritam Sahoo</text>
+
+    <!-- Row 2: DESIGNATION -->
+    <text x="0" y="30" fill="#00f5d4" font-size="13" font-weight="700" class="t-code-v4">DESIGNATION  :</text>
+    <text x="145" y="30" fill="#e2e8f0" font-size="13" class="t-code-v4">Quantum Computing Researcher | Algorithm–Hardware Co-Design</text>
+
+    <!-- Row 3: STATEVECTOR -->
+    <text x="0" y="60" fill="#00f5d4" font-size="13" font-weight="700" class="t-code-v4">STATEVECTOR  :</text>
+    <text x="145" y="60" fill="#c084fc" font-size="12.5" font-weight="600" class="t-code-v4">|&#968;&#10217; = &#945;|Quantum_Annealing&#10217; + &#946;|Relativistic_Hamiltonians&#10217; + &#947;|Tensor_Networks&#10217;</text>
+
+    <!-- Row 4: PLATFORMS -->
+    <text x="0" y="90" fill="#00f5d4" font-size="13" font-weight="700" class="t-code-v4">PLATFORMS    :</text>
+    <text x="145" y="90" fill="#38bdf8" font-size="13" class="t-code-v4">IBM Quantum (Superconducting) | D-Wave Advantage | IQM | Quantinuum</text>
+
+    <!-- Row 5: MISSION -->
+    <text x="0" y="120" fill="#00f5d4" font-size="13" font-weight="700" class="t-code-v4">MISSION      :</text>
+    <text x="145" y="120" fill="#94a3b8" font-size="12" class="t-code-v4">Synthesizing low-depth quantum algorithms, pulse-level compilation, and GPU simulation</text>
+
+    <!-- Row 6: Interactive Terminal Prompt -->
+    <g transform="translate(0, 150)">
+      <line x1="0" y1="-8" x2="680" y2="-8" stroke="#1a2538" stroke-width="1" />
+      <text x="0" y="12" fill="#64748b" font-size="11.5" class="t-code-v4">&gt; COHERENCE: LOCKED • HARDWARE_INTERFACE: SYNCHRONIZED</text>
+      <rect x="440" y="0" width="8" height="15" fill="#00f5d4" class="cursor-v4" />
+    </g>
+  </g>
+
+  <!-- Right Side: Rotating Quantum Radar / Alignment Dial -->
+  <g id="telemetry-radar" transform="translate(0, 0)">
+    <!-- Radar Circle Rings -->
+    <circle cx="820" cy="145" r="42" fill="#090f1c" stroke="#1f2d45" stroke-width="1.4" />
+    <circle cx="820" cy="145" r="28" fill="none" stroke="#1f2d45" stroke-width="1" stroke-dasharray="3 3" />
+    <circle cx="820" cy="145" r="14" fill="none" stroke="#1f2d45" stroke-width="0.8" />
+
+    <!-- Crosshairs -->
+    <line x1="820" y1="95" x2="820" y2="195" stroke="#18253a" stroke-width="1" />
+    <line x1="770" y1="145" x2="870" y2="145" stroke="#18253a" stroke-width="1" />
+
+    <!-- Rotating Radar Sweep Line -->
+    <g class="radar-needle">
+      <line x1="820" y1="145" x2="820" y2="105" stroke="#00f5d4" stroke-width="1.8" filter="url(#telem-glow-v4)" />
+    </g>
+
+    <!-- Radar Blip -->
+    <circle cx="832" cy="130" r="3.5" fill="#00e5ff" class="radar-blip" filter="url(#telem-glow-v4)" />
+
+    <text x="820" y="202" fill="#64748b" font-size="9" font-weight="600" text-anchor="middle" class="t-code-v4">QPU_ALIGN</text>
+  </g>
+</svg>
