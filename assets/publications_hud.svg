@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 230" width="100%" height="100%">
+  <defs>
+    <pattern id="pub-grid" width="22" height="22" patternUnits="userSpaceOnUse">
+      <path d="M 22 0 L 0 0 0 22" fill="none" stroke="#131c2e" stroke-width="0.75" opacity="0.6" />
+      <circle cx="22" cy="0" r="1.1" fill="#22d3ee" opacity="0.25" />
+    </pattern>
+
+    <filter id="pub-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      text { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+      .pub-font { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+
+      @keyframes pubPulseRow1 {
+        0%, 100% { border-color: #1e293b; }
+        50% { stroke: #22d3ee; filter: drop-shadow(0 0 6px #22d3ee); }
+      }
+      @keyframes pubPulseRow2 {
+        0%, 100% { border-color: #1e293b; }
+        50% { stroke: #38bdf8; filter: drop-shadow(0 0 6px #38bdf8); }
+      }
+
+      .pub-card-1 { animation: pubPulseRow1 4s infinite; }
+      .pub-card-2 { animation: pubPulseRow2 4s infinite 2s; }
+
+      @keyframes pubBeaconBlink {
+        0%, 100% { opacity: 1; filter: drop-shadow(0 0 4px #22d3ee); }
+        50% { opacity: 0.3; }
+      }
+      .pub-beacon { animation: pubBeaconBlink 1.4s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <!-- Container Box -->
+  <rect x="10" y="10" width="900" height="210" rx="14" fill="#060911" stroke="#1e293b" stroke-width="1.6" />
+  <rect x="12" y="12" width="896" height="206" rx="12" fill="url(#pub-grid)" />
+
+  <!-- Corner Brackets -->
+  <path d="M 16 30 L 16 16 L 30 16" fill="none" stroke="#22d3ee" stroke-width="2.2" />
+  <path d="M 904 30 L 904 16 L 890 16" fill="none" stroke="#22d3ee" stroke-width="2.2" />
+  <path d="M 16 200 L 16 214 L 30 214" fill="none" stroke="#22d3ee" stroke-width="2.2" />
+  <path d="M 904 200 L 904 214 L 890 214" fill="none" stroke="#22d3ee" stroke-width="2.2" />
+
+  <!-- ==================== 2 GLOWING PUBLICATION CARDS ==================== -->
+
+  <!-- PAPER 1: PHYSICAL REVIEW A -->
+  <g transform="translate(24, 22)">
+    <rect x="0" y="0" width="872" height="84" rx="8" fill="#0b1120" stroke="#1e293b" stroke-width="1.2" class="pub-card-1" />
+    <rect x="0" y="0" width="4" height="84" rx="2" fill="#22d3ee" />
+    <circle cx="20" cy="20" r="4" fill="#22d3ee" class="pub-beacon" />
+    
+    <!-- Journal Badge -->
+    <rect x="34" y="10" width="190" height="20" rx="4" fill="#22d3ee" fill-opacity="0.12" stroke="#22d3ee" stroke-width="0.8" />
+    <text x="129" y="24" fill="#22d3ee" font-size="10" font-weight="700" text-anchor="middle" class="pub-font">PHYSICAL REVIEW A (2026)</text>
+    <text x="235" y="24" fill="#94a3b8" font-size="10" class="pub-font">DOI: 10.1103/7np1-njdc • arXiv:2508.12779</text>
+    <rect x="708" y="10" width="148" height="20" rx="4" fill="#22d3ee" fill-opacity="0.08" stroke="#22d3ee" stroke-width="0.7" stroke-opacity="0.5" />
+    <text x="782" y="24" fill="#22d3ee" font-size="9.5" font-weight="700" text-anchor="middle" class="pub-font">[ APS • PEER-REVIEWED ]</text>
+
+    <!-- Title -->
+    <text x="34" y="48" fill="#ffffff" font-size="12.5" font-weight="800" class="pub-font">
+      Application of Quantum Annealing to Computation of Molecular Properties
+    </text>
+    <!-- Abstract Summary -->
+    <text x="34" y="68" fill="#cbd5e1" font-size="11" font-weight="400" class="pub-font">
+      Experimental validation of quantum annealing protocols for molecular dipoles &amp; electronic responses on QPUs.
+    </text>
+  </g>
+
+  <!-- PAPER 2: REVERSE QUANTUM ANNEALING -->
+  <g transform="translate(24, 118)">
+    <rect x="0" y="0" width="872" height="84" rx="8" fill="#0b1120" stroke="#1e293b" stroke-width="1.2" class="pub-card-2" />
+    <rect x="0" y="0" width="4" height="84" rx="2" fill="#38bdf8" />
+    <circle cx="20" cy="20" r="4" fill="#38bdf8" class="pub-beacon" />
+
+    <!-- Preprint Badge -->
+    <rect x="34" y="10" width="130" height="20" rx="4" fill="#38bdf8" fill-opacity="0.12" stroke="#38bdf8" stroke-width="0.8" />
+    <text x="99" y="24" fill="#38bdf8" font-size="10" font-weight="700" text-anchor="middle" class="pub-font">PREPRINT (2026)</text>
+    <text x="175" y="24" fill="#94a3b8" font-size="10" class="pub-font">arXiv:2610.39129 [quant-ph] • Sahoo, P P</text>
+    <rect x="708" y="10" width="148" height="20" rx="4" fill="#38bdf8" fill-opacity="0.08" stroke="#38bdf8" stroke-width="0.7" stroke-opacity="0.5" />
+    <text x="782" y="24" fill="#38bdf8" font-size="9.5" font-weight="700" text-anchor="middle" class="pub-font">[ ARXIV • QUANT-PH ]</text>
+
+    <!-- Title -->
+    <text x="34" y="48" fill="#ffffff" font-size="12.5" font-weight="800" class="pub-font">
+      Reverse Quantum Annealing for Ground-State Energy Calculation in Molecules
+    </text>
+    <!-- Abstract Summary -->
+    <text x="34" y="68" fill="#cbd5e1" font-size="11" font-weight="400" class="pub-font">
+      Reverse-forward annealing schedules overcoming local minima to enhance ground-state success probabilities.
+    </text>
+  </g>
+</svg>

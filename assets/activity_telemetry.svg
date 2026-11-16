@@ -1,0 +1,332 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Grid -->
+    <pattern id="telemetry-grid" width="22" height="22" patternUnits="userSpaceOnUse">
+      <path d="M 22 0 L 0 0 0 22" fill="none" stroke="#131c2e" stroke-width="0.75" opacity="0.6" />
+      <circle cx="22" cy="0" r="1.1" fill="#22d3ee" opacity="0.25" />
+    </pattern>
+
+    <!-- Linear Gradients for Activity Bars -->
+    <linearGradient id="bar-grad-cyan" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.2" />
+      <stop offset="60%" stop-color="#22d3ee" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="1" />
+    </linearGradient>
+
+    <linearGradient id="bar-grad-purple" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.2" />
+      <stop offset="60%" stop-color="#818cf8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="1" />
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="act-glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="act-glow-purple" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      .t-mono-act {
+        font-family: ui-monospace, 'SF Mono', 'Cascadia Code', 'JetBrains Mono', 'Fira Code', 'Consolas', 'Liberation Mono', monospace;
+      }
+
+      /* Activity Spectrum Bars Animation */
+      @keyframes barMotion1 { 0%, 100% { height: 25px; y: 95px; } 50% { height: 85px; y: 35px; } }
+      @keyframes barMotion2 { 0%, 100% { height: 60px; y: 60px; } 50% { height: 30px; y: 90px; } }
+      @keyframes barMotion3 { 0%, 100% { height: 40px; y: 80px; } 50% { height: 95px; y: 25px; } }
+      @keyframes barMotion4 { 0%, 100% { height: 80px; y: 40px; } 50% { height: 45px; y: 75px; } }
+      @keyframes barMotion5 { 0%, 100% { height: 35px; y: 85px; } 50% { height: 75px; y: 45px; } }
+      @keyframes barMotion6 { 0%, 100% { height: 70px; y: 50px; } 50% { height: 100px; y: 20px; } }
+
+      .b-anim-1 { animation: barMotion1 2.2s ease-in-out infinite; }
+      .b-anim-2 { animation: barMotion2 1.8s ease-in-out infinite; }
+      .b-anim-3 { animation: barMotion3 2.5s ease-in-out infinite; }
+      .b-anim-4 { animation: barMotion4 1.9s ease-in-out infinite; }
+      .b-anim-5 { animation: barMotion5 2.7s ease-in-out infinite; }
+      .b-anim-6 { animation: barMotion6 2.1s ease-in-out infinite; }
+
+      /* Circular Dials Rotation and Pulse */
+      @keyframes dialRotateTick {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes dialPulseRing {
+        0%, 100% { stroke-dashoffset: 40; }
+        50% { stroke-dashoffset: 10; }
+      }
+      @keyframes dialBlinkLed {
+        0%, 100% { opacity: 1; filter: drop-shadow(0 0 4px #22d3ee); }
+        50% { opacity: 0.3; }
+      }
+      .dial-rot-tick {
+        transform-origin: 45px 45px;
+        animation: dialRotateTick 6s linear infinite;
+      }
+      .dial-arc-pulse {
+        animation: dialPulseRing 3.5s ease-in-out infinite;
+      }
+      .dial-led-ping {
+        animation: dialBlinkLed 1.4s ease-in-out infinite;
+      }
+
+      /* Lattice Sparks */
+      @keyframes latticeSparkA {
+        0%, 100% { fill: #1e293b; opacity: 0.5; }
+        30%, 70% { fill: #22d3ee; opacity: 1; filter: drop-shadow(0 0 5px #22d3ee); }
+      }
+      @keyframes latticeSparkB {
+        0%, 100% { fill: #1e293b; opacity: 0.5; }
+        45%, 85% { fill: #818cf8; opacity: 1; filter: drop-shadow(0 0 5px #818cf8); }
+      }
+      @keyframes latticeSparkC {
+        0%, 100% { fill: #1e293b; opacity: 0.5; }
+        20%, 60% { fill: #38bdf8; opacity: 1; filter: drop-shadow(0 0 5px #38bdf8); }
+      }
+      .lat-dot-a { animation: latticeSparkA 3s ease-in-out infinite; }
+      .lat-dot-b { animation: latticeSparkB 3.8s ease-in-out infinite 0.6s; }
+      .lat-dot-c { animation: latticeSparkC 2.6s ease-in-out infinite 1.2s; }
+
+      /* Ticker Banner Scroll */
+      @keyframes tickerSlide {
+        0% { transform: translateX(0px); }
+        100% { transform: translateX(-500px); }
+      }
+      @keyframes actTitleGlow {
+        0%, 100% { filter: drop-shadow(0 0 2px #22d3ee); }
+        50% { filter: drop-shadow(0 0 8px #22d3ee); }
+      }
+      @keyframes metricNumPulse {
+        0%, 100% { filter: drop-shadow(0 0 2px rgba(255,255,255,0.4)); }
+        50% { filter: drop-shadow(0 0 8px #22d3ee); }
+      }
+      .act-title-anim { animation: actTitleGlow 3s ease-in-out infinite; }
+      .act-num-pulse { animation: metricNumPulse 2.5s ease-in-out infinite; }
+      .ticker-move {
+        animation: tickerSlide 18s linear infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Container Box -->
+  <rect x="10" y="10" width="900" height="340" rx="14" fill="#060911" stroke="#1e293b" stroke-width="1.6" />
+  <rect x="12" y="12" width="896" height="336" rx="12" fill="url(#telemetry-grid)" />
+
+  <!-- Corner Brackets -->
+  <path d="M 16 32 L 16 16 L 32 16" fill="none" stroke="#22d3ee" stroke-width="2.2" />
+  <path d="M 904 32 L 904 16 L 888 16" fill="none" stroke="#22d3ee" stroke-width="2.2" />
+  <path d="M 16 328 L 16 344 L 32 344" fill="none" stroke="#22d3ee" stroke-width="2.2" />
+  <path d="M 904 328 L 904 344 L 888 344" fill="none" stroke="#22d3ee" stroke-width="2.2" />
+
+  <!-- Header Section -->
+  <g transform="translate(36, 38)">
+    <circle cx="8" cy="8" r="5" fill="#22d3ee" class="dial-led-ping" filter="url(#act-glow-cyan)" />
+    <text x="24" y="12" fill="#22d3ee" font-size="12" font-weight="700" letter-spacing="1.5" class="t-mono-act act-title-anim">
+      06 // LIVE TELEMETRY &amp; REAL-TIME ACTIVITY METRICS
+    </text>
+    <text x="848" y="12" fill="#64748b" font-size="10" font-weight="500" letter-spacing="1" class="t-mono-act" text-anchor="end">
+      QUANTUM RUNTIME: ACTIVE • REFRESH: CONTINUOUS
+    </text>
+  </g>
+
+  <!-- ==================== MAIN 3-PANEL TELEMETRY GRID ==================== -->
+
+  <!-- PANEL 1: ACTIVITY SPECTRUM HISTOGRAM (Left) -->
+  <g transform="translate(32, 65)">
+    <!-- Substrate -->
+    <rect x="0" y="0" width="370" height="210" rx="10" fill="#0b1120" stroke="#1e293b" stroke-width="1.2" />
+
+    <!-- Panel Title -->
+    <text x="18" y="24" fill="#cbd5e1" font-size="11" font-weight="700" letter-spacing="1" class="t-mono-act">
+      ACTIVITY FLUX SPECTRUM
+    </text>
+    <text x="352" y="24" fill="#22d3ee" font-size="9" font-weight="600" text-anchor="end" class="t-mono-act">
+      100 kHz HARVEST
+    </text>
+
+    <!-- Spectrum Analyzer Baseline & Grid Lines -->
+    <line x1="20" y1="165" x2="350" y2="165" stroke="#1e293b" stroke-width="1.2" />
+    <line x1="20" y1="115" x2="350" y2="115" stroke="#131d2e" stroke-width="0.8" stroke-dasharray="3 3" />
+    <line x1="20" y1="65" x2="350" y2="65" stroke="#131d2e" stroke-width="0.8" stroke-dasharray="3 3" />
+
+    <!-- 16 Animated Frequency / Activity Bars -->
+    <g transform="translate(26, 45)">
+      <!-- Bar 1 -->
+      <rect x="0" y="70" width="14" height="50" rx="3" fill="url(#bar-grad-cyan)" class="b-anim-1" />
+      <!-- Bar 2 -->
+      <rect x="20" y="40" width="14" height="80" rx="3" fill="url(#bar-grad-cyan)" class="b-anim-4" />
+      <!-- Bar 3 -->
+      <rect x="40" y="60" width="14" height="60" rx="3" fill="url(#bar-grad-cyan)" class="b-anim-2" />
+      <!-- Bar 4 -->
+      <rect x="60" y="30" width="14" height="90" rx="3" fill="url(#bar-grad-cyan)" class="b-anim-6" />
+      <!-- Bar 5 -->
+      <rect x="80" y="55" width="14" height="65" rx="3" fill="url(#bar-grad-cyan)" class="b-anim-3" />
+      <!-- Bar 6 -->
+      <rect x="100" y="75" width="14" height="45" rx="3" fill="url(#bar-grad-cyan)" class="b-anim-5" />
+      <!-- Bar 7 -->
+      <rect x="120" y="35" width="14" height="85" rx="3" fill="url(#bar-grad-cyan)" class="b-anim-1" />
+      <!-- Bar 8 -->
+      <rect x="140" y="20" width="14" height="100" rx="3" fill="url(#bar-grad-cyan)" class="b-anim-6" />
+      <!-- Bar 9 -->
+      <rect x="160" y="45" width="14" height="75" rx="3" fill="url(#bar-grad-purple)" class="b-anim-2" />
+      <!-- Bar 10 -->
+      <rect x="180" y="25" width="14" height="95" rx="3" fill="url(#bar-grad-purple)" class="b-anim-3" />
+      <!-- Bar 11 -->
+      <rect x="200" y="60" width="14" height="60" rx="3" fill="url(#bar-grad-purple)" class="b-anim-5" />
+      <!-- Bar 12 -->
+      <rect x="220" y="35" width="14" height="85" rx="3" fill="url(#bar-grad-purple)" class="b-anim-1" />
+      <!-- Bar 13 -->
+      <rect x="240" y="50" width="14" height="70" rx="3" fill="url(#bar-grad-purple)" class="b-anim-4" />
+      <!-- Bar 14 -->
+      <rect x="260" y="20" width="14" height="100" rx="3" fill="url(#bar-grad-purple)" class="b-anim-6" />
+      <!-- Bar 15 -->
+      <rect x="280" y="65" width="14" height="55" rx="3" fill="url(#bar-grad-purple)" class="b-anim-2" />
+      <!-- Bar 16 -->
+      <rect x="300" y="40" width="14" height="80" rx="3" fill="url(#bar-grad-purple)" class="b-anim-4" />
+    </g>
+
+    <!-- Bottom Time Axis Labels -->
+    <text x="32" y="184" fill="#64748b" font-size="8.5" class="t-mono-act">00:00</text>
+    <text x="108" y="184" fill="#64748b" font-size="8.5" class="t-mono-act">06:00</text>
+    <text x="184" y="184" fill="#64748b" font-size="8.5" class="t-mono-act">12:00</text>
+    <text x="260" y="184" fill="#64748b" font-size="8.5" class="t-mono-act">18:00</text>
+    <text x="326" y="184" fill="#22d3ee" font-size="8.5" font-weight="700" class="t-mono-act">NOW</text>
+
+    <!-- Bottom Metric Readout -->
+    <text x="18" y="200" fill="#38bdf8" font-size="9" font-weight="600" class="t-mono-act">
+      PEAK ACTIVITY: 98.4 FLUX • SAMPLING: CONTINUOUS
+    </text>
+  </g>
+
+  <!-- PANEL 2: 2 CIRCULAR QUANTUM METRIC DIALS (Center) -->
+  <g transform="translate(414, 65)">
+    <rect x="0" y="0" width="248" height="210" rx="10" fill="#0b1120" stroke="#1e293b" stroke-width="1.2" />
+
+    <text x="16" y="24" fill="#cbd5e1" font-size="11" font-weight="700" letter-spacing="1" class="t-mono-act">
+      QPU BENCHMARK DIALS
+    </text>
+
+    <!-- DIAL 1: COHERENCE UPTIME -->
+    <g transform="translate(24, 45)">
+      <!-- Background Gauge Track -->
+      <circle cx="45" cy="45" r="36" fill="none" stroke="#162032" stroke-width="6" />
+      <!-- Animated Neon Arc -->
+      <circle cx="45" cy="45" r="36" fill="none" stroke="#22d3ee" stroke-width="6" stroke-dasharray="226" stroke-dashoffset="24" stroke-linecap="round" class="dial-arc-pulse" filter="url(#act-glow-cyan)" />
+      <!-- Rotating Tick Pointer -->
+      <g class="dial-rot-tick">
+        <line x1="45" y1="13" x2="45" y2="21" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+      </g>
+      <!-- Center Readout -->
+      <text x="45" y="42" fill="#ffffff" font-size="13" font-weight="800" text-anchor="middle" class="t-mono-act act-num-pulse">99.4%</text>
+      <text x="45" y="55" fill="#22d3ee" font-size="7.5" font-weight="700" text-anchor="middle" class="t-mono-act">UPTIME</text>
+
+      <text x="45" y="102" fill="#cbd5e1" font-size="9" font-weight="600" text-anchor="middle" class="t-mono-act">QPU COHERENCE</text>
+      <text x="45" y="116" fill="#64748b" font-size="8" text-anchor="middle" class="t-mono-act">T₁/T₂ LOCKED</text>
+    </g>
+
+    <!-- DIAL 2: 2Q GATE FIDELITY -->
+    <g transform="translate(134, 45)">
+      <circle cx="45" cy="45" r="36" fill="none" stroke="#162032" stroke-width="6" />
+      <circle cx="45" cy="45" r="36" fill="none" stroke="#818cf8" stroke-width="6" stroke-dasharray="226" stroke-dashoffset="18" stroke-linecap="round" class="dial-arc-pulse" filter="url(#act-glow-purple)" />
+      <g class="dial-rot-tick" style="animation-direction: reverse; animation-duration: 8s;">
+        <line x1="45" y1="13" x2="45" y2="21" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+      </g>
+      <text x="45" y="42" fill="#ffffff" font-size="12.5" font-weight="800" text-anchor="middle" class="t-mono-act act-num-pulse">99.98%</text>
+      <text x="45" y="55" fill="#a78bfa" font-size="7.5" font-weight="700" text-anchor="middle" class="t-mono-act">FIDELITY</text>
+
+      <text x="45" y="102" fill="#cbd5e1" font-size="9" font-weight="600" text-anchor="middle" class="t-mono-act">2-QUBIT GATES</text>
+      <text x="45" y="116" fill="#64748b" font-size="8" text-anchor="middle" class="t-mono-act">DD OPTIMIZED</text>
+    </g>
+
+    <!-- Bottom Dial Status -->
+    <line x1="16" y1="178" x2="232" y2="178" stroke="#1e293b" stroke-width="1" />
+    <text x="124" y="196" fill="#38bdf8" font-size="8.5" font-weight="600" text-anchor="middle" class="t-mono-act">
+      HARDWARE EXECUTION VERIFIED
+    </text>
+  </g>
+
+  <!-- PANEL 3: QUANTUM TOPOLOGY ACTIVITY LATTICE (Right) -->
+  <g transform="translate(674, 65)">
+    <rect x="0" y="0" width="214" height="210" rx="10" fill="#0b1120" stroke="#1e293b" stroke-width="1.2" />
+
+    <text x="16" y="24" fill="#cbd5e1" font-size="11" font-weight="700" letter-spacing="1" class="t-mono-act">
+      TOPOLOGY LATTICE
+    </text>
+    <text x="198" y="24" fill="#22d3ee" font-size="8.5" font-weight="700" text-anchor="end" class="t-mono-act">
+      LIVE
+    </text>
+
+    <!-- Coupling Grid Substrate -->
+    <g transform="translate(24, 45)">
+      <!-- Coupling Lines (Horizontal) -->
+      <line x1="12" y1="20" x2="152" y2="20" stroke="#1e293b" stroke-width="1.2" />
+      <line x1="12" y1="55" x2="152" y2="55" stroke="#1e293b" stroke-width="1.2" />
+      <line x1="12" y1="90" x2="152" y2="90" stroke="#1e293b" stroke-width="1.2" />
+
+      <!-- Coupling Lines (Vertical) -->
+      <line x1="20" y1="12" x2="20" y2="98" stroke="#1e293b" stroke-width="1.2" />
+      <line x1="62" y1="12" x2="62" y2="98" stroke="#1e293b" stroke-width="1.2" />
+      <line x1="104" y1="12" x2="104" y2="98" stroke="#1e293b" stroke-width="1.2" />
+      <line x1="146" y1="12" x2="146" y2="98" stroke="#1e293b" stroke-width="1.2" />
+
+      <!-- Row 1 Nodes -->
+      <circle cx="20" cy="20" r="5" class="lat-dot-a" />
+      <circle cx="62" cy="20" r="5" class="lat-dot-b" />
+      <circle cx="104" cy="20" r="5" class="lat-dot-c" />
+      <circle cx="146" cy="20" r="5" class="lat-dot-a" />
+
+      <!-- Row 2 Nodes -->
+      <circle cx="20" cy="55" r="5" class="lat-dot-c" />
+      <circle cx="62" cy="55" r="5" class="lat-dot-a" />
+      <circle cx="104" cy="55" r="5" class="lat-dot-b" />
+      <circle cx="146" cy="55" r="5" class="lat-dot-c" />
+
+      <!-- Row 3 Nodes -->
+      <circle cx="20" cy="90" r="5" class="lat-dot-b" />
+      <circle cx="62" cy="90" r="5" class="lat-dot-c" />
+      <circle cx="104" cy="90" r="5" class="lat-dot-a" />
+      <circle cx="146" cy="90" r="5" class="lat-dot-b" />
+    </g>
+
+    <!-- Bottom Status -->
+    <text x="107" y="174" fill="#818cf8" font-size="9" font-weight="700" text-anchor="middle" class="t-mono-act">
+      HEAVY-HEX COUPLING
+    </text>
+    <text x="107" y="194" fill="#64748b" font-size="8" text-anchor="middle" class="t-mono-act">
+      ALL COUPLERS ACTIVE
+    </text>
+  </g>
+
+  <!-- ==================== BOTTOM STREAMING TICKER BANNER ==================== -->
+  <g transform="translate(32, 288)">
+    <rect x="0" y="0" width="856" height="42" rx="8" fill="#090e18" stroke="#1e293b" stroke-width="1.2" />
+
+    <!-- Static Label Left -->
+    <rect x="0" y="0" width="130" height="42" rx="8" fill="#101928" />
+    <circle cx="18" cy="21" r="3.5" fill="#22d3ee" class="dial-led-ping" />
+    <text x="32" y="25" fill="#22d3ee" font-size="10" font-weight="700" class="t-mono-act">LIVE FEEDS:</text>
+
+    <!-- Clip Path for Scrolling Ticker Window -->
+    <clipPath id="ticker-window-clip">
+      <rect x="140" y="0" width="700" height="42" />
+    </clipPath>
+
+    <!-- Animated Smooth Scrolling Ticker -->
+    <g clip-path="url(#ticker-window-clip)">
+      <g class="ticker-move">
+        <text x="140" y="25" fill="#cbd5e1" font-size="10" font-weight="500" class="t-mono-act">
+          [0x7F2A: TRANSPILATION_PASS_OPTIMIZED] • [0x3B9C: VQE_GRADIENT_CONVERGED] • [0x9E41: MPS_SVD_COMPRESSION_COMPLETED] • [0x1C88: PULSE_SCHEDULE_VALIDATED] • [0x5A02: STATEVECTOR_MEASURED_99.98%] • [0x7F2A: TRANSPILATION_PASS_OPTIMIZED] • [0x3B9C: VQE_GRADIENT_CONVERGED]
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>

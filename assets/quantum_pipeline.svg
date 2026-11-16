@@ -1,0 +1,482 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 770" width="100%" height="100%">
+  <defs>
+    <!-- Background Grid -->
+    <pattern id="grid-pipe-v5" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#131c2e" stroke-width="0.75" opacity="0.65" />
+      <circle cx="24" cy="0" r="1.1" fill="#22d3ee" opacity="0.25" />
+    </pattern>
+
+    <!-- Linear Gradients for Stage Accent Bars -->
+    <linearGradient id="grad-p1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="100%" stop-color="#00bbf9" />
+    </linearGradient>
+    <linearGradient id="grad-p2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="grad-p3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+    <linearGradient id="grad-p4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f472b6" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+    <linearGradient id="grad-p5a" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="grad-p5b" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="p-glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="p-glow-violet" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="p-glow-pink" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      text {
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      }
+      .p-font {
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      }
+
+      /* Cascading Stage Energy Illumination Cycle */
+      @keyframes stageCascade1 {
+        0%, 18% { stroke: #22d3ee; filter: drop-shadow(0 0 8px #22d3ee); }
+        25%, 100% { stroke: #1e293b; filter: none; }
+      }
+      @keyframes stageCascade2 {
+        0%, 18% { stroke: #1e293b; filter: none; }
+        20%, 38% { stroke: #38bdf8; filter: drop-shadow(0 0 8px #38bdf8); }
+        45%, 100% { stroke: #1e293b; filter: none; }
+      }
+      @keyframes stageCascade3 {
+        0%, 38% { stroke: #1e293b; filter: none; }
+        40%, 58% { stroke: #818cf8; filter: drop-shadow(0 0 8px #818cf8); }
+        65%, 100% { stroke: #1e293b; filter: none; }
+      }
+      @keyframes stageCascade4 {
+        0%, 58% { stroke: #1e293b; filter: none; }
+        60%, 78% { stroke: #f472b6; filter: drop-shadow(0 0 8px #f472b6); }
+        85%, 100% { stroke: #1e293b; filter: none; }
+      }
+      @keyframes stageCascade5A {
+        0%, 78% { stroke: #1e293b; filter: none; }
+        80%, 98% { stroke: #34d399; filter: drop-shadow(0 0 10px #34d399); }
+        100% { stroke: #1e293b; filter: none; }
+      }
+      @keyframes stageCascade5B {
+        0%, 78% { stroke: #1e293b; filter: none; }
+        80%, 98% { stroke: #fbbf24; filter: drop-shadow(0 0 10px #fbbf24); }
+        100% { stroke: #1e293b; filter: none; }
+      }
+
+      .stg-v5-1 { animation: stageCascade1 10s ease-in-out infinite; }
+      .stg-v5-2 { animation: stageCascade2 10s ease-in-out infinite; }
+      .stg-v5-3 { animation: stageCascade3 10s ease-in-out infinite; }
+      .stg-v5-4 { animation: stageCascade4 10s ease-in-out infinite; }
+      .stg-v5-5a { animation: stageCascade5A 10s ease-in-out infinite; }
+      .stg-v5-5b { animation: stageCascade5B 10s ease-in-out infinite; }
+
+      /* Continuous Quantum Data Flow Buses */
+      @keyframes busFlowVertical {
+        0% { stroke-dashoffset: 40; }
+        100% { stroke-dashoffset: 0; }
+      }
+      .flow-bus-stream {
+        stroke-dasharray: 8 5;
+        animation: busFlowVertical 1.4s linear infinite;
+      }
+
+      /* Traveling High-Speed Data Comets */
+      @keyframes cometFlow1 {
+        0%, 15% { transform: translateY(0px); opacity: 0; }
+        17% { opacity: 1; }
+        23% { transform: translateY(38px); opacity: 1; }
+        25%, 100% { opacity: 0; }
+      }
+      @keyframes cometFlow2 {
+        0%, 35% { transform: translateY(0px); opacity: 0; }
+        37% { opacity: 1; }
+        43% { transform: translateY(38px); opacity: 1; }
+        45%, 100% { opacity: 0; }
+      }
+      @keyframes cometFlow3 {
+        0%, 55% { transform: translateY(0px); opacity: 0; }
+        57% { opacity: 1; }
+        63% { transform: translateY(38px); opacity: 1; }
+        65%, 100% { opacity: 0; }
+      }
+      @keyframes cometSplitLeft {
+        0%, 75% { transform: translate(0px, 0px); opacity: 0; }
+        77% { opacity: 1; }
+        81% { transform: translate(0px, 28px); opacity: 1; }
+        86% { transform: translate(-210px, 28px); opacity: 1; }
+        90% { transform: translate(-210px, 54px); opacity: 1; }
+        93%, 100% { opacity: 0; }
+      }
+      @keyframes cometSplitRight {
+        0%, 75% { transform: translate(0px, 0px); opacity: 0; }
+        77% { opacity: 1; }
+        81% { transform: translate(0px, 28px); opacity: 1; }
+        86% { transform: translate(210px, 28px); opacity: 1; }
+        90% { transform: translate(210px, 54px); opacity: 1; }
+        93%, 100% { opacity: 0; }
+      }
+
+      .comet-p1 { animation: cometFlow1 10s ease-in-out infinite; }
+      .comet-p2 { animation: cometFlow2 10s ease-in-out infinite; }
+      .comet-p3 { animation: cometFlow3 10s ease-in-out infinite; }
+      .comet-sp-l { animation: cometSplitLeft 10s ease-in-out infinite; }
+      .comet-sp-r { animation: cometSplitRight 10s ease-in-out infinite; }
+
+      /* Widget Animations */
+      @keyframes spinFlip {
+        0%, 100% { transform: translateY(0px); fill: #22d3ee; }
+        50% { transform: translateY(-3px); fill: #38bdf8; }
+      }
+      @keyframes vqeGradPulse {
+        0%, 100% { opacity: 0.7; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.08); filter: drop-shadow(0 0 5px #38bdf8); }
+      }
+      @keyframes depthCountShimmer {
+        0%, 100% { opacity: 0.8; }
+        50% { opacity: 1; filter: drop-shadow(0 0 6px #a78bfa); }
+      }
+      @keyframes pulseWaveScroll {
+        0% { stroke-dashoffset: 60; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes qpuShotBlink {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 1; filter: drop-shadow(0 0 6px #34d399); }
+      }
+      @keyframes tensorGridFlash {
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 1; filter: drop-shadow(0 0 6px #fbbf24); }
+      }
+
+      .spin-indicator { animation: spinFlip 1.8s ease-in-out infinite; }
+      .vqe-indicator { animation: vqeGradPulse 2.4s ease-in-out infinite; transform-origin: center; }
+      .depth-indicator { animation: depthCountShimmer 2s ease-in-out infinite; }
+      .pulse-microwave-wave { stroke-dasharray: 60; animation: pulseWaveScroll 2.2s linear infinite; }
+      .qpu-shot-led { animation: qpuShotBlink 1.2s ease-in-out infinite; }
+      .tensor-hpc-led { animation: tensorGridFlash 1.6s ease-in-out infinite; }
+
+      @keyframes pipeTitleShimmer {
+        0%, 100% { filter: drop-shadow(0 0 2px rgba(34, 211, 238, 0.5)); }
+        50% { filter: drop-shadow(0 0 10px rgba(34, 211, 238, 0.9)) drop-shadow(0 0 20px rgba(56, 189, 248, 0.6)); }
+      }
+      .pipe-title-anim { animation: pipeTitleShimmer 3s ease-in-out infinite; }
+      /* Beacon Blink */
+      @keyframes pipeBeaconPing {
+        0%, 100% { opacity: 1; filter: drop-shadow(0 0 5px #22d3ee); }
+        50% { opacity: 0.25; }
+      }
+      .p-beacon-ping { animation: pipeBeaconPing 1.4s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <!-- Background Base Container -->
+  <rect x="10" y="10" width="900" height="750" rx="18" fill="#080c15" stroke="#1f293d" stroke-width="1.8" />
+  <rect x="12" y="12" width="896" height="746" rx="16" fill="url(#grid-pipe-v5)" />
+
+  <!-- Cyber Corner Reticles -->
+  <path d="M 16 38 L 16 16 L 38 16" fill="none" stroke="#22d3ee" stroke-width="2.5" />
+  <path d="M 904 38 L 904 16 L 882 16" fill="none" stroke="#22d3ee" stroke-width="2.5" />
+  <path d="M 16 732 L 16 754 L 38 754" fill="none" stroke="#22d3ee" stroke-width="2.5" />
+  <path d="M 904 732 L 904 754 L 882 754" fill="none" stroke="#22d3ee" stroke-width="2.5" />
+
+  <!-- ==================== HEADER SECTION ==================== -->
+  <g transform="translate(36, 40)">
+    <circle cx="8" cy="8" r="5" fill="#22d3ee" class="p-beacon-ping" filter="url(#p-glow-cyan)" />
+    <text x="24" y="12" fill="#22d3ee" font-size="11.5" font-weight="700" letter-spacing="1.5" class="p-font">
+      COMPILER PIPELINE // QUANTUM-CLASSICAL CO-DESIGN EXECUTION STACK
+    </text>
+    <text x="848" y="12" fill="#64748b" font-size="10" font-weight="500" letter-spacing="1" class="p-font" text-anchor="end">
+      PIPELINE FIDELITY: 99.98% • 5 STAGES ACTIVE
+    </text>
+
+    <!-- Main Title -->
+    <text x="0" y="34" fill="#ffffff" font-size="19" font-weight="800" letter-spacing="0.8" class="p-font pipe-title-anim">
+      AUTOMATED QUANTUM COMPILATION &amp; HYBRID EXECUTION PIPELINE
+    </text>
+    <!-- Subtitle (Consistent Typography) -->
+    <text x="0" y="50" fill="#38bdf8" font-size="11.5" font-weight="600" class="p-font">
+      Continuous Data Flow: Hamiltonian Specification ➔ Ansatz Dynamics ➔ Transpilation ➔ QPU Drivers &amp; HPC
+    </text>
+  </g>
+
+  <!-- ==================== CONNECTOR BUSES & TRAVELING COMETS ==================== -->
+  <!-- Pipe 1 -> 2 (x=460, y=177 to 215) -->
+  <line x1="460" y1="177" x2="460" y2="215" stroke="#1e293b" stroke-width="5" />
+  <line x1="460" y1="177" x2="460" y2="215" stroke="#22d3ee" stroke-width="2" class="flow-bus-stream" opacity="0.8" />
+  <polygon points="460,215 456,206 464,206" fill="#22d3ee" />
+  <!-- Comet 1 -->
+  <g class="comet-p1">
+    <circle cx="460" cy="177" r="4.5" fill="#ffffff" filter="url(#p-glow-cyan)" />
+  </g>
+
+  <!-- Pipe 2 -> 3 (x=460, y=297 to 335) -->
+  <line x1="460" y1="297" x2="460" y2="335" stroke="#1e293b" stroke-width="5" />
+  <line x1="460" y1="297" x2="460" y2="335" stroke="#38bdf8" stroke-width="2" class="flow-bus-stream" opacity="0.8" />
+  <polygon points="460,335 456,326 464,326" fill="#38bdf8" />
+  <!-- Comet 2 -->
+  <g class="comet-p2">
+    <circle cx="460" cy="297" r="4.5" fill="#ffffff" filter="url(#p-glow-cyan)" />
+  </g>
+
+  <!-- Pipe 3 -> 4 (x=460, y=417 to 455) -->
+  <line x1="460" y1="417" x2="460" y2="455" stroke="#1e293b" stroke-width="5" />
+  <line x1="460" y1="417" x2="460" y2="455" stroke="#818cf8" stroke-width="2" class="flow-bus-stream" opacity="0.8" />
+  <polygon points="460,455 456,446 464,446" fill="#818cf8" />
+  <!-- Comet 3 -->
+  <g class="comet-p3">
+    <circle cx="460" cy="417" r="4.5" fill="#ffffff" filter="url(#p-glow-violet)" />
+  </g>
+
+  <!-- Pipe 4 -> Split 5A & 5B (Bifurcation Router) -->
+  <!-- Split Conduit Path -->
+  <path d="M 460 537 L 460 565 M 250 565 L 670 565 M 250 565 L 250 590 M 670 565 L 670 590" fill="none" stroke="#1e293b" stroke-width="5" />
+  <path d="M 460 537 L 460 565 M 250 565 L 670 565 M 250 565 L 250 590 M 670 565 L 670 590" fill="none" stroke="#f472b6" stroke-width="2" class="flow-bus-stream" opacity="0.85" />
+  <polygon points="250,590 246,581 254,581" fill="#34d399" />
+  <polygon points="670,590 666,581 674,581" fill="#fbbf24" />
+
+  <!-- Split Node Router Pulse -->
+  <circle cx="460" cy="565" r="5" fill="#f472b6" filter="url(#p-glow-pink)" />
+
+  <!-- Comets Splitting Left & Right -->
+  <g class="comet-sp-l">
+    <circle cx="460" cy="537" r="4" fill="#34d399" filter="url(#p-glow-cyan)" />
+  </g>
+  <g class="comet-sp-r">
+    <circle cx="460" cy="537" r="4" fill="#fbbf24" filter="url(#p-glow-pink)" />
+  </g>
+
+  <!-- ==================== 5 PIPELINE STAGE MODULES ==================== -->
+
+  <!-- STAGE 01: HAMILTONIAN SPECIFICATION & ORBITAL MAPPING -->
+  <g transform="translate(65, 95)">
+    <!-- Stage Card Frame -->
+    <rect x="0" y="0" width="790" height="82" rx="12" fill="#0b1120" stroke="#1e293b" stroke-width="1.4" class="stg-v5-1" />
+    <rect x="0" y="0" width="6" height="82" rx="3" fill="url(#grad-p1)" />
+
+    <!-- Left Content -->
+    <g transform="translate(20, 14)">
+      <!-- Stage Badge -->
+      <rect x="0" y="0" width="86" height="20" rx="4" fill="#22d3ee" fill-opacity="0.14" stroke="#22d3ee" stroke-width="0.8" />
+      <text x="43" y="14" fill="#22d3ee" font-size="10" font-weight="700" text-anchor="middle" class="p-font">STAGE 01</text>
+      <!-- Title -->
+      <text x="98" y="15" fill="#ffffff" font-size="14.5" font-weight="800" class="p-font">
+        HAMILTONIAN SPECIFICATION &amp; ORBITAL MAPPING
+      </text>
+      <!-- Body Text (Consistent Monospace Font) -->
+      <text x="0" y="38" fill="#cbd5e1" font-size="11" font-weight="500" class="p-font">
+        • Jordan-Wigner, Bravyi-Kitaev &amp; Parity Mappings
+      </text>
+      <text x="0" y="54" fill="#94a3b8" font-size="10.5" font-weight="400" class="p-font">
+        • QSCI Subspace Expansion • SparsePauliOp Compression
+      </text>
+    </g>
+
+    <!-- Right Animated Widget: Spin-Orbital Pauli String Matrix -->
+    <g transform="translate(615, 12)">
+      <rect x="0" y="0" width="158" height="58" rx="8" fill="#060911" stroke="#1e293b" stroke-width="1" />
+      <text x="79" y="16" fill="#64748b" font-size="8.5" font-weight="600" text-anchor="middle" class="p-font">PAULI BASIS OPERATORS</text>
+      <!-- 4 Spin Boxes: [X] [Z] [X] [Y] with Spin Arrows -->
+      <g transform="translate(18, 22)">
+        <rect x="0" y="0" width="30" height="24" rx="4" fill="#122035" stroke="#22d3ee" stroke-width="0.8" />
+        <text x="15" y="16" fill="#22d3ee" font-size="10.5" font-weight="700" text-anchor="middle" class="p-font spin-indicator">X₀↑</text>
+
+        <rect x="38" y="0" width="30" height="24" rx="4" fill="#122035" stroke="#38bdf8" stroke-width="0.8" />
+        <text x="53" y="16" fill="#38bdf8" font-size="10.5" font-weight="700" text-anchor="middle" class="p-font spin-indicator" style="animation-delay: -0.4s;">Z₁↓</text>
+
+        <rect x="76" y="0" width="30" height="24" rx="4" fill="#122035" stroke="#22d3ee" stroke-width="0.8" />
+        <text x="91" y="16" fill="#22d3ee" font-size="10.5" font-weight="700" text-anchor="middle" class="p-font spin-indicator" style="animation-delay: -0.8s;">X₂↑</text>
+
+        <rect x="114" y="0" width="30" height="24" rx="4" fill="#122035" stroke="#38bdf8" stroke-width="0.8" />
+        <text x="129" y="16" fill="#38bdf8" font-size="10.5" font-weight="700" text-anchor="middle" class="p-font spin-indicator" style="animation-delay: -1.2s;">Y₃↓</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- STAGE 02: ALGORITHMIC ANSATZ & EVOLUTION DYNAMICS -->
+  <g transform="translate(65, 215)">
+    <rect x="0" y="0" width="790" height="82" rx="12" fill="#0b1120" stroke="#1e293b" stroke-width="1.4" class="stg-v5-2" />
+    <rect x="0" y="0" width="6" height="82" rx="3" fill="url(#grad-p2)" />
+
+    <g transform="translate(20, 14)">
+      <rect x="0" y="0" width="86" height="20" rx="4" fill="#38bdf8" fill-opacity="0.14" stroke="#38bdf8" stroke-width="0.8" />
+      <text x="43" y="14" fill="#38bdf8" font-size="10" font-weight="700" text-anchor="middle" class="p-font">STAGE 02</text>
+      <text x="98" y="15" fill="#ffffff" font-size="14.5" font-weight="800" class="p-font">
+        ALGORITHMIC ANSATZ &amp; EVOLUTION DYNAMICS
+      </text>
+      <text x="0" y="38" fill="#cbd5e1" font-size="11" font-weight="500" class="p-font">
+        • Adaptive Circuit Growth (ADAPT-VQE) • Reverse Annealing
+      </text>
+      <text x="0" y="54" fill="#94a3b8" font-size="10.5" font-weight="400" class="p-font">
+        • Subspace Krylov Dynamics • Imaginary-Time Evolution
+      </text>
+    </g>
+
+    <!-- Right Animated Widget: VQE Parameter Energy Convergence -->
+    <g transform="translate(615, 12)">
+      <rect x="0" y="0" width="158" height="58" rx="8" fill="#060911" stroke="#1e293b" stroke-width="1" />
+      <text x="79" y="16" fill="#64748b" font-size="8.5" font-weight="600" text-anchor="middle" class="p-font">ANSATZ CONVERGENCE</text>
+      <g transform="translate(18, 22)">
+        <rect x="0" y="0" width="130" height="24" rx="4" fill="#0d1e30" stroke="#38bdf8" stroke-width="0.8" class="vqe-indicator" />
+        <circle cx="16" cy="12" r="3.5" fill="#38bdf8" class="p-beacon-ping" />
+        <text x="68" y="16" fill="#38bdf8" font-size="10" font-weight="700" text-anchor="middle" class="p-font">ΔE &lt; 10⁻⁶ Ha [CONVERGED]</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- STAGE 03: COMPILER SYNTHESIS & CIRCUIT TRANSPILATION -->
+  <g transform="translate(65, 335)">
+    <rect x="0" y="0" width="790" height="82" rx="12" fill="#0b1120" stroke="#1e293b" stroke-width="1.4" class="stg-v5-3" />
+    <rect x="0" y="0" width="6" height="82" rx="3" fill="url(#grad-p3)" />
+
+    <g transform="translate(20, 14)">
+      <rect x="0" y="0" width="86" height="20" rx="4" fill="#818cf8" fill-opacity="0.14" stroke="#818cf8" stroke-width="0.8" />
+      <text x="43" y="14" fill="#a78bfa" font-size="10" font-weight="700" text-anchor="middle" class="p-font">STAGE 03</text>
+      <text x="98" y="15" fill="#ffffff" font-size="14.5" font-weight="800" class="p-font">
+        COMPILER SYNTHESIS &amp; CIRCUIT TRANSPILATION
+      </text>
+      <text x="0" y="38" fill="#cbd5e1" font-size="11" font-weight="500" class="p-font">
+        • Commutation DAG Rewriting • Gate Synthesis &amp; Routing
+      </text>
+      <text x="0" y="54" fill="#94a3b8" font-size="10.5" font-weight="400" class="p-font">
+        • Error Sensitivity Profiling • ZNE Error Mitigation
+      </text>
+    </g>
+
+    <!-- Right Animated Widget: Depth Reduction Transpiler Gauge -->
+    <g transform="translate(615, 12)">
+      <rect x="0" y="0" width="158" height="58" rx="8" fill="#060911" stroke="#1e293b" stroke-width="1" />
+      <text x="79" y="16" fill="#64748b" font-size="8.5" font-weight="600" text-anchor="middle" class="p-font">CIRCUIT OPTIMIZATION</text>
+      <g transform="translate(18, 22)">
+        <rect x="0" y="0" width="130" height="24" rx="4" fill="#1e1232" stroke="#818cf8" stroke-width="0.8" />
+        <text x="65" y="16" fill="#a78bfa" font-size="9.5" font-weight="700" text-anchor="middle" class="p-font depth-indicator">DEPTH 48 ➔ 14 (-70%)</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- STAGE 04: PULSE-LEVEL SCHEDULING & DRIVER CONTROL -->
+  <g transform="translate(65, 455)">
+    <rect x="0" y="0" width="790" height="82" rx="12" fill="#0b1120" stroke="#1e293b" stroke-width="1.4" class="stg-v5-4" />
+    <rect x="0" y="0" width="6" height="82" rx="3" fill="url(#grad-p4)" />
+
+    <g transform="translate(20, 14)">
+      <rect x="0" y="0" width="86" height="20" rx="4" fill="#f472b6" fill-opacity="0.14" stroke="#f472b6" stroke-width="0.8" />
+      <text x="43" y="14" fill="#f472b6" font-size="10" font-weight="700" text-anchor="middle" class="p-font">STAGE 04</text>
+      <text x="98" y="15" fill="#ffffff" font-size="14.5" font-weight="800" class="p-font">
+        PULSE-LEVEL SCHEDULING &amp; DRIVER CONTROL
+      </text>
+      <text x="0" y="38" fill="#cbd5e1" font-size="11" font-weight="500" class="p-font">
+        • OpenPulse Synthesis • DRAG Microwave Calibration
+      </text>
+      <text x="0" y="54" fill="#94a3b8" font-size="10.5" font-weight="400" class="p-font">
+        • Dynamical Decoupling (XY4) • Crosstalk Suppression
+      </text>
+    </g>
+
+    <!-- Right Animated Widget: Microwave Pulse Envelope -->
+    <g transform="translate(615, 12)">
+      <rect x="0" y="0" width="158" height="58" rx="8" fill="#060911" stroke="#1e293b" stroke-width="1" />
+      <text x="79" y="16" fill="#64748b" font-size="8.5" font-weight="600" text-anchor="middle" class="p-font">MICROWAVE DRAG PULSE</text>
+      <!-- Oscilloscope Pulse Track -->
+      <g transform="translate(14, 22)">
+        <line x1="0" y1="14" x2="160" y2="14" stroke="#1e293b" stroke-width="1" />
+        <!-- Gaussian Pulse Path -->
+        <path d="M 10 14 Q 40 14, 60 4 Q 80 -8, 100 4 Q 120 14, 150 14" fill="none" stroke="#f472b6" stroke-width="2" class="pulse-microwave-wave" filter="url(#p-glow-pink)" />
+      </g>
+    </g>
+  </g>
+
+  <!-- ==================== STAGE 05A & 05B (DUAL EXECUTION TARGETS) ==================== -->
+
+  <!-- STAGE 05A: PHYSICAL QUANTUM HARDWARE -->
+  <g transform="translate(65, 590)">
+    <rect x="0" y="0" width="380" height="110" rx="12" fill="#0b1120" stroke="#1e293b" stroke-width="1.4" class="stg-v5-5a" />
+    <rect x="0" y="0" width="6" height="110" rx="3" fill="url(#grad-p5a)" />
+
+    <g transform="translate(18, 14)">
+      <!-- Header Badge -->
+      <rect x="0" y="0" width="92" height="20" rx="4" fill="#34d399" fill-opacity="0.14" stroke="#34d399" stroke-width="0.8" />
+      <text x="46" y="14" fill="#34d399" font-size="9.5" font-weight="700" text-anchor="middle" class="p-font">STAGE 05A</text>
+      <text x="104" y="15" fill="#ffffff" font-size="13" font-weight="800" class="p-font">PHYSICAL QPU ARRAYS</text>
+
+      <text x="0" y="40" fill="#cbd5e1" font-size="11.5" font-weight="500" class="p-font">
+        • IBM Quantum (Superconducting Transmons)
+      </text>
+      <text x="0" y="58" fill="#cbd5e1" font-size="11.5" font-weight="500" class="p-font">
+        • D-Wave Advantage (Quantum Annealing)
+      </text>
+      <text x="0" y="76" fill="#94a3b8" font-size="11" font-weight="400" class="p-font">
+        • IQM Resonance • Quantinuum Trapped-Ion
+      </text>
+    </g>
+
+    <!-- Top Right Active LED -->
+    <circle cx="355" cy="24" r="4.5" fill="#34d399" class="qpu-shot-led" />
+  </g>
+
+  <!-- STAGE 05B: HPC TENSOR NETWORK EMULATION -->
+  <g transform="translate(475, 590)">
+    <rect x="0" y="0" width="380" height="110" rx="12" fill="#0b1120" stroke="#1e293b" stroke-width="1.4" class="stg-v5-5b" />
+    <rect x="0" y="0" width="6" height="110" rx="3" fill="url(#grad-p5b)" />
+
+    <g transform="translate(18, 14)">
+      <rect x="0" y="0" width="92" height="20" rx="4" fill="#fbbf24" fill-opacity="0.14" stroke="#fbbf24" stroke-width="0.8" />
+      <text x="46" y="14" fill="#fbbf24" font-size="9.5" font-weight="700" text-anchor="middle" class="p-font">STAGE 05B</text>
+      <text x="104" y="15" fill="#ffffff" font-size="13" font-weight="800" class="p-font">HPC TENSOR EMULATION</text>
+
+      <text x="0" y="40" fill="#cbd5e1" font-size="11.5" font-weight="500" class="p-font">
+        • CUDA-Accelerated Statevector &amp; Gradients
+      </text>
+      <text x="0" y="58" fill="#cbd5e1" font-size="11.5" font-weight="500" class="p-font">
+        • Tensor Networks: MPS, MPO, TEBD SVD
+      </text>
+      <text x="0" y="76" fill="#94a3b8" font-size="11" font-weight="400" class="p-font">
+        • cuQuantum &amp; Krylov Subspace Lanczos Solvers
+      </text>
+    </g>
+
+    <circle cx="355" cy="24" r="4.5" fill="#fbbf24" class="tensor-hpc-led" />
+  </g>
+
+  <!-- ==================== BOTTOM TELEMETRY STRIP ==================== -->
+  <g transform="translate(36, 730)">
+    <line x1="0" y1="0" x2="848" y2="0" stroke="#1e293b" stroke-width="1" />
+    <circle cx="0" cy="14" r="3" fill="#22d3ee" class="p-beacon-ping" />
+    <text x="12" y="17" fill="#64748b" font-size="10" font-weight="600" class="p-font">
+      QUANTUM EXECUTION ENGINE: CONTINUOUS HARDWARE-ALGORITHM CO-DESIGN
+    </text>
+    <text x="848" y="17" fill="#22d3ee" font-size="10" font-weight="700" letter-spacing="1" class="p-font" text-anchor="end">
+      STATUS: OPTIMAL CADENCE ➔
+    </text>
+  </g>
+</svg>
